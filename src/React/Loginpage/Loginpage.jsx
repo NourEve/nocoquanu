@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import logo from "../../../public/assets/nocoquanu-logo.png";
+import gif from "../../../public/assets//scout.gif";
 
 function Loginpage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     // Faire quelque chose avec les informations d'identification ici
   };
 
@@ -40,9 +43,16 @@ function Loginpage() {
                         required
                     />
 
-                    <button type="submit">Login</button>
+                    <button type="submit">Connexion</button>
+                    
                 </form>
             </div>
+
+       
+              <div className="gif">
+                <img src={gif} alt="gif" />
+              </div>
+            
         </div>
     </main>
   );
