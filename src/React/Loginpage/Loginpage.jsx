@@ -28,12 +28,12 @@ const Loginpage = () => {
     <main>
       <div className="loginpage">
         <div className="logo_container">
-          <img className="logo" src={logo} alt="logo" />
+         <h2>Nocoquanu</h2>
         </div>
 
         <div className="form">
           <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Nom d'utilisateur :</label>
+            <label htmlFor="username">Nom d'utilisateur:</label>
             <input
               type="text"
               id="username"
@@ -43,7 +43,7 @@ const Loginpage = () => {
               required
             />
 
-            <label htmlFor="password">Mot de passe :</label>
+            <label htmlFor="password">Mot de passe:</label>
             <input
               type="password"
               id="password"

@@ -19,6 +19,13 @@ body{
                 .logo{
                     width: 60%;
                 }
+                h2{
+                    color: white;
+                    font-family: 'Press Start 2P', cursive;
+                    font-size: 2.2rem;
+                    margin: 7.5% 0;
+                    text-transform: uppercase;
+                }
             }
             .form{
                 margin-top: 15%;
@@ -39,14 +46,15 @@ body{
          
                 label{
                     color: white;
-                    font-size: 1.5rem;
+                    font-size: 1.05rem;
                     margin-bottom: 5%;
+                    font-family: 'Press Start 2P', cursive;
         
                 }
                 input{
              
                     background-color: transparent;
-                    border: white 2px solid;
+                    border: white 3px solid;
                     border-radius: 40px;
                     width: 100%;
                     height: 15%;
@@ -56,14 +64,15 @@ body{
                     text-indent: 7.5%;
                 }
                 button{
-                    width: 60%;
+                    width: 65%;
                     height: 20%;
                     background: linear-gradient(180deg, #597B3E 0%, #425435 100%);
                     border-radius: 30px;
                     border: none;
                     color: white;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     margin: 0 auto;
+                    font-family: 'Press Start 2P', cursive;
 
                     &:hover{
                         opacity: 0.85;
@@ -71,13 +80,22 @@ body{
 
                 }
             }
-            .scout{
-          position: absolute;
+            .scout {
+                position: absolute;
                 width: 25%;
                 bottom: -2%;
-                left: 35%;
-
-            }
+                animation: slide-right 2s linear infinite;
+                transition: opacity 2s ease-in-out;
+              }
+              
+              @keyframes slide-right {
+                0% {
+                  transform: translateX(-200%);
+                }
+                100% {
+                  transform: translateX(350%);
+                }
+              }
         }
     }
 }
