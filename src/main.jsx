@@ -8,7 +8,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from "./routes/root";
-import ErrorPage from "./error-page";
 import Equipepage from "./React/Equipe/Equipepage";
 import Tutopage from "./React/Tuto";
 
