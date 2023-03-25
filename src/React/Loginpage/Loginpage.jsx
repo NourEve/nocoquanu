@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from "../../../public/assets/nocoquanu-logo.png";
 
 function Loginpage() {
   const [username, setUsername] = useState('');
@@ -13,8 +14,8 @@ function Loginpage() {
     <main>
         <div className="loginpage">
 
-            <div className="title">
-                <h2>Nocoquanu</h2>
+            <div className="logo_container">
+            <img className="logo"src={logo} alt="logo" />
             </div>
 
             <div className="form">
