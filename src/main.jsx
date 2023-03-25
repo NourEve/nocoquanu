@@ -6,6 +6,9 @@ import "./index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import EquipePage from "./React/EquipePage/EquipePage";
 import TutoPage from "./React/TutoPage/TutoPage";
+import VueEquipe from "./React/EquipePage/VueEquipe";
+import AllBadges from "./React/EquipePage/AllBadges";
+import Defis from "./React/EquipePage/Defis";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,20 @@ const router = createBrowserRouter([
   {
     path: "/equipe",
     element: <EquipePage />,
+    children: [
+      {
+        path: "",
+        element: <VueEquipe />,
+      },
+      {
+        path: "badges",
+        element: <AllBadges />,
+      },
+      {
+        path: "defis",
+        element: <Defis />,
+      },
+    ],
   },
   {
     path: "/tuto",
