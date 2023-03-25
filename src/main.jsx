@@ -7,7 +7,7 @@ import TutoPage from "./React/TutoPage/Tutopage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    < Loginpage/>
+    < TutoPage/>
 
   </React.StrictMode>
 );

@@ -30,12 +30,13 @@ function TutoPage() {
         </select>
       </div>
       <div className="Data">
-        {data.map(item => (
-          <details key={item.id} className={item.category}>
-            <summary>{item.nom}</summary>
-            <p>{item.tuto}</p>
-          </details>
-        ))}
+      {data.length > 0 && data.map(item => (
+  <details key={item.id} className={item.category}>
+    <summary>{item.title}</summary>
+    <p>{item.description}</p>
+  </details>
+))}
+
       </div>
     </main>
   );
