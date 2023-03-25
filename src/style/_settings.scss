@@ -11,7 +11,11 @@
       box-sizing: border-box;
 }
 
-body {}
+body {
+      background-image: url('../../public/background.png');
+      background-size:cover;
+      background-repeat:no-repeat;
+}
 
 li {
       list-style-type: none;
