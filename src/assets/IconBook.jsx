@@ -1,6 +1,6 @@
 import React from "react";
 
-const IconBook = () => {
+const IconBook = (props) => {
   return (
     <svg
       viewBox="0 0 900 1000"
