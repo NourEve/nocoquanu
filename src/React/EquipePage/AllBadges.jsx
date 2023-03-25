@@ -44,10 +44,10 @@ const AllBadges = () => {
     },
   ];
   return (
-    <div>
+    <div className="badges__wrapper">
       <h1>Badges</h1>
       {BadgesArray.map((badge, index) => (
-        <button key={index}>
+        <button className="badges__wrapper__buttons" key={index}>
           <img src={badge.url} alt={"badge de/du " + badge.nom} />
           <h3>{badge.nom}</h3>
         </button>
