@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const VueEquipe = () => {
+  const [equipe, setEquipe] = useState([]);
+  const { equipeId } = useParams();
+
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: `https://test.hugoorickx.tech/chi/${equipeId}`,
+      responseType: "json",
+    }).then((res) => {
+      setEquipe(res.data.message);
+    });
+  }, []);
+
+  console.log(equipe);
+
   return (
     <div>
-      <h1>Nom de l'équipe</h1>
+      <h1>{equipe[0].groupe_nom}</h1>
       <ul>
-        <li>Pierre</li>
-        <li>Pierre</li>
-        <li>Pierre</li>
-        <li>Pierre</li>
+        {equipe.map((personne, index) => (
+          <li key={index}>{personne.enfant_nom}</li>
+        ))}
       </ul>
-      <h2>Nombres de quêtes journalières réalisées</h2>
-      <h2>Nombres de badges acquis/nombre de badges au total</h2>
+      <h2>Quêtes journalières : 13</h2>
+      <h2>3 / 10 badges</h2>
     </div>
   );
 };

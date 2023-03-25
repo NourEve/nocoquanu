@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <MapPage />,
   },
   {
-    path: "/equipe",
+    path: "/equipe/:equipeId",
     element: <EquipePage />,
     children: [
       {
