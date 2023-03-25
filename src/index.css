@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+body main {
+  width: 100dvw;
+  height: 100dvh;
+  background-image: url(../../public/background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+body main .loginpage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+body main .loginpage .logo_container {
+  width: 100%;
+}
+body main .loginpage .logo_container .logo {
+  width: 60%;
+}
+body main .loginpage .form {
+  margin-top: 15%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+body main .loginpage .form form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 60%;
+}
+body main .loginpage .form label {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 5%;
+}
+body main .loginpage .form input {
+  background-color: transparent;
+  border: white 2px solid;
+  border-radius: 40px;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 10%;
+}
+body main .loginpage .form button {
+  width: 70%;
+  height: 60%;
+  background: linear-gradient(180deg, #597B3E 0%, #425435 100%);
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+body main .loginpage .gif {
+  position: absolute;
+  bottom: -2%;
+  left: 35%;
+  width: 25%;
+}
+body main .loginpage .gif img {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */
