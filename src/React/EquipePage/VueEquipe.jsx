@@ -7,20 +7,14 @@ const VueEquipe = () => {
   const { equipeId } = useParams();
 
   useEffect(() => {
-    axios({
-      method: "get",
-      url: `https://test.hugoorickx.tech/chi/${equipeId}`,
-      responseType: "json",
-    }).then((res) => {
-      setEquipe(res.data.message);
-    });
+    axios.get(`https://test.hugoorickx.tech/chi/${equipeId}`)
+    .then(res => setEquipe(res.data.message));
   }, []);
 
-  console.log(equipe);
 
   return (
     <div>
-      <h1>{equipe[0].groupe_nom}</h1>
+      <h1>{equipe.groupe_nom}</h1>
       <ul>
         {equipe.map((personne, index) => (
           <li key={index}>{personne.enfant_nom}</li>
