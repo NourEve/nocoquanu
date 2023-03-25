@@ -22,6 +22,7 @@ const MapPage = () => {
           {nom.nom}
         </Link>
       ))}
+      <div id="thegamegoeshere"></div>
     </div>
   );
 };

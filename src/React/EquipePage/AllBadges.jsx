@@ -68,7 +68,7 @@ const AllBadges = () => {
   return (
     <div className="badges__wrapper">
       <h1>Badges</h1>
-      {BadgesArray.map((badge, index) => (
+      <div className="badges__allwrapper">{BadgesArray.map((badge, index) => (
         <button
           className="badges__wrapper__buttons"
           key={index}
@@ -78,11 +78,12 @@ const AllBadges = () => {
         </button>
       ))}
       {activeBadgeIndex !== -1 && (
-        <div>
+        <div class="badge__popup">
           <h3>{BadgesArray[activeBadgeIndex].nom}</h3>
           <VueBadge id={BadgesArray[activeBadgeIndex].id} />
         </div>
       )}
+      </div>
     </div>
   );
 };
