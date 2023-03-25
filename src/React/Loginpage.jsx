@@ -10,36 +10,40 @@ function Loginpage() {
   };
 
   return (
-    <div className="loginpage">
-      <div className="title">
-        <h2>Nocoquanu</h2>
-      </div>
-      <div className="form">
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="username">Nom d'utilisateur :</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
+    <main>
+        <div className="loginpage">
 
-          <label htmlFor="password">Mot de passe :</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+            <div className="title">
+                <h2>Nocoquanu</h2>
+            </div>
 
-          <button type="submit">Login</button>
-        </form>
-      </div>
-    </div>
+            <div className="form">
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="username">Nom d'utilisateur :</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        required
+                    />
+
+                    <label htmlFor="password">Mot de passe :</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
   );
 }
 
