@@ -32,6 +32,8 @@ var camera;
 
 function preload(){
 
+    this.load.audio('bgMusic', 'public/assets/musics/nocoquanu.mp3')
+
     //intégralité des choses qu'on retrouve dans un camps
     this.load.image("tentebleue", "public/assets/decor/tente_bleue.png")
     this.load.image("tentejaune", "public/assets/decor/tente_jaune.png")
@@ -135,6 +137,9 @@ function preload(){
 }
 
 function create(){
+
+    this.bgMusic = this.sound.add('bgMusic', { volume: 0.5, loop: true });
+    this.bgMusic.play();
 
     var block = this.physics.add.image(400, 100, 'block');
 
@@ -370,7 +375,6 @@ function create(){
     this.physics.world.enable([bassinGold4])
     bassinGold4.body.setImmovable()
     bassinGold4.body.setVelocity(0,0).setBounce(0,0).setCollideWorldBounds(true)
-
 
      //création feu
     this.anims.create({
