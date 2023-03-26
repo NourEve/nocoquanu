@@ -1,4 +1,6 @@
-
+const currentPath = window.location.pathname;
+if (currentPath === "/map") 
+{
 var config = {
     type : Phaser.AUTO,
     width : 1000, 
@@ -834,3 +836,4 @@ function update(time, delta){
 
 }
 
+}
