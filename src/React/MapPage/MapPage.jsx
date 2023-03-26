@@ -50,7 +50,6 @@ const MapPage = () => {
         {isParag.map((nom, index) => (
           <p key={index}>{nom.nom}</p>
         ))}
-        
       </div>
     </div>
   );

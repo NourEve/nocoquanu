@@ -2,8 +2,8 @@ import React from "react";
 
 const Defis = () => {
   return (
-    <div>
-      <p>test défis</p>
+    <div className="vueEquipe">
+      <h1 className="vueEquipe__h1">test défis</h1>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Logout = () => {
   };
 
   return (
-    <button onClick={logout}>
+    <button onClick={logout} className="button__logout">
       <IconPowerOff />
     </button>
   );

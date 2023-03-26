@@ -5,6 +5,7 @@ import axios from "axios";
 const VueEquipe = () => {
   const [equipe, setEquipe] = useState([]);
   const [idEquipe, setIdEquipe] = useState("");
+  const [nomEquipe, setNomEquipe] = useState("");
 
   useEffect(() => {
     const ID_log = localStorage.getItem("ID_log");
@@ -17,19 +18,31 @@ const VueEquipe = () => {
     }
   }, []);
 
-  console.log(idEquipe);
-  console.log(equipe);
+  useEffect(() => {
+    equipe.map((personne) => setNomEquipe(personne.groupe_nom));
+  }, [equipe]);
 
   return (
-    <div>
-      <h1>{equipe.groupe_nom}</h1>
+    <div className="vueEquipe">
+      <h1 className="vueEquipe__h1">{nomEquipe}</h1>
       <ul>
         {equipe.map((personne, index) => (
           <li key={index}>{personne.enfant_nom}</li>
         ))}
       </ul>
-      <h2>Quêtes journalières : 13</h2>
-      <h2>3 / 10 badges</h2>
+      <h2 className="vueEquipe__h2 vueEquipe__h2--quetes">
+        Quêtes journalières :{" "}
+        <span className="vueEquipe__h2--quetes--nbre">13</span>
+      </h2>
+      <h2 className="vueEquipe__h2 vueEquipe__h2--badges">
+        {" "}
+        <span className="vueEquipe__h2--quetes--nbre">3</span> / 10 badges
+      </h2>
+      <div className="vueEquipe__badges">
+        <img src="../../public/assets/badge_feu_1.webp" alt="" />
+        <img src="../../public/assets/badge_eau_2.webp" alt="" />
+        <img src="../../public/assets/badge_campement_1.webp" alt="" />
+      </div>
     </div>
   );
 };

@@ -1,124 +1,134 @@
-body{
+body {
 
-    #root{
-        position:relative; 
-    
+    #root {
+        position: relative;
 
-    main{
-        width: 100dvw;
-        height: 100dvh;
-        background-image: url(../../public/background.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: center;
-        
-        .loginpage{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            overflow-y: auto;
-            
-            .logo_container{
-                width: 90%;
-                border-bottom: solid hsl(0, 0%, 100%, 0.5) 2px;
-                margin: 0 5%;
-                .logo{
-                    width: 60%;
-                }
-                h2{
-                    color: white;
-                    font-family: 'Press Start 2P', cursive;
-                    font-size: 2.2rem;
-                    margin: 7.5% 0;
-                    text-transform: uppercase;
-                }
-            }
-            .form{
-                margin-top: 15%;
-               width: 100%;
-               height: 100%;
-               display: flex;
-               justify-content: center;
-               text-align: center;
-               
-               form{
+
+        main {
+            width: 100dvw;
+            height: 100dvh;
+            background-image: url(../../public/background.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+
+            .loginpage {
+                width: 100%;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
-                width: 75%;
-               height: 60%; 
-              
-               }   
-                label{
-                    color: white;
-                    font-size: 0.9rem;
-                    margin-bottom: 5%;
-                    font-family: 'Press Start 2P', cursive;
-        
-                }
-                input{
-             
-                    background-color: transparent;
-                    border: white 3px solid;
-                    border-radius: 40px;
-                    width: 100%;
-                    height: 20%;
-                    margin-bottom: 10%;
-                    color: white;
-                    font-size: 1.5rem;
-                    text-indent: 7.5%;
-                }
-                button{
-                    width: 80%;
-                    height: 22.5%;
-                    background: linear-gradient(180deg, #597B3E 0%, #425435 100%);
-                    border-radius: 30px;
-                    border: none;
-                    color: white;
-                    font-size: 0.9rem;
-                    margin: 0 auto;
-                    font-family: 'Press Start 2P', cursive;
+                text-align: center;
+                overflow-y: auto;
 
-                    &:hover{
-                        opacity: 0.85;
+                .logo_container {
+                    width: 90%;
+                    border-bottom: solid hsl(0, 0%, 100%, 0.5) 2px;
+                    margin: 0 5%;
+
+                    .logo {
+                        width: 60%;
                     }
 
+                    h2 {
+                        color: white;
+                        font-family: 'Press Start 2P', cursive;
+                        font-size: 2.2rem;
+                        margin: 7.5% 0;
+                        text-transform: uppercase;
+                    }
                 }
-            }
-            .scout {
-                position: absolute;
-                width: 25%;
-                bottom: 0;
-                animation: slide-right 2s linear infinite;
-                transition: opacity 2s ease-in-out;
-              }
-              
-              @keyframes slide-right {
-                0% {
-                  transform: translateX(-200%);
+
+                .form {
+                    margin-top: 15%;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        width: 75%;
+                        height: 60%;
+
+                    }
+
+                    label {
+                        color: white;
+                        font-size: 0.9rem;
+                        margin-bottom: 5%;
+                        font-family: 'Press Start 2P', cursive;
+
+                    }
+
+                    input {
+
+                        background-color: transparent;
+                        border: white 3px solid;
+                        border-radius: 40px;
+                        width: 100%;
+                        height: 20%;
+                        margin-bottom: 10%;
+                        color: white;
+                        font-size: 1.5rem;
+                        text-indent: 7.5%;
+                    }
+
+                    button {
+                        width: 80%;
+                        height: 22.5%;
+                        background: linear-gradient(180deg, #597B3E 0%, #425435 100%);
+                        border-radius: 30px;
+                        border: none;
+                        color: white;
+                        font-size: 0.9rem;
+                        margin: 0 auto;
+                        font-family: 'Press Start 2P', cursive;
+
+                        &:hover {
+                            opacity: 0.85;
+                        }
+
+                    }
                 }
-                100% {
-                  transform: translateX(350%);
+
+                .scout {
+                    position: absolute;
+                    width: 25%;
+                    bottom: 0;
+                    animation: slide-right 2s linear infinite;
+                    transition: opacity 2s ease-in-out;
                 }
-            }
-            .scout {
-                position: absolute;
-                width: 25%;
-                bottom: -2%;
-                animation: slide-right 2s linear infinite;
-                transition: opacity 2s ease-in-out;
-              }
-              
-              @keyframes slide-right {
-                0% {
-                  transform: translateX(-200%);
+
+                @keyframes slide-right {
+                    0% {
+                        transform: translateX(-200%);
+                    }
+
+                    100% {
+                        transform: translateX(350%);
+                    }
                 }
-                100% {
-                  transform: translateX(350%);
+
+                .scout {
+                    position: absolute;
+                    width: 25%;
+                    bottom: -2%;
+                    animation: slide-right 2s linear infinite;
+                    transition: opacity 2s ease-in-out;
+                }
+
+                @keyframes slide-right {
+                    0% {
+                        transform: translateX(-200%);
+                    }
+
+                    100% {
+                        transform: translateX(350%);
+                    }
                 }
             }
         }
     }
-}
 }

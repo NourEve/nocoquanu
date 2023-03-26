@@ -8,26 +8,36 @@
 	padding: 1rem;
 	flex-wrap: wrap;
 	min-height: 35rem;
-    position:relative;
+	position: relative;
 
-    button {
-        width: 5rem;
-        height: 5rem;
-        background-color: transparent;
-        border: none;
-    }
+	h1 {
+		color: white;
+		font-family: 'Press Start 2P', cursive;
+		font-size: 2.2rem;
+		margin: 7.5% 0;
+		text-transform: uppercase;
+		text-align: center;
+		width: 100%;
+	}
 
-.badges__wrapper__buttons img {
-	width: 5rem;
-}
+	button {
+		width: 5rem;
+		height: 5rem;
+		background-color: transparent;
+		border: none;
+	}
 
-.badges__allwrapper {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-	justify-content: space-evenly;
-	align-items: center;
-}
+	.badges__wrapper__buttons img {
+		width: 5rem;
+	}
+
+	.badges__allwrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: space-evenly;
+		align-items: center;
+	}
 
 }
 
@@ -48,7 +58,7 @@
 	z-index: 999;
 	margin: 1rem 1rem;
 	border-radius: 1rem;
-    backdrop-filter:blur(2rem);
+	backdrop-filter: blur(2rem);
 	border: 1px solid rgba(255, 255, 255, 0.5);
 }
 

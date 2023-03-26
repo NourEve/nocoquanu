@@ -21,6 +21,11 @@ nav a:last-child {
 	border-right: 0;
 }
 
+.button__logout {
+	background-color: transparent;
+	border: none;
+}
+
 .active path {
 	fill: #107869;
 }
