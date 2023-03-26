@@ -29,6 +29,8 @@ if (currentPath === "/map") {
   var camera;
 
   function preload() {
+    this.load.audio("bgMusic", "public/assets/musics/nocoquanu.mp3");
+
     //intégralité des choses qu'on retrouve dans un camps
     this.load.image("tentebleue", "public/assets/decor/tente_bleue.png");
     this.load.image("tentejaune", "public/assets/decor/tente_jaune.png");
@@ -122,6 +124,9 @@ if (currentPath === "/map") {
   }
 
   function create() {
+    this.bgMusic = this.sound.add("bgMusic", { volume: 0.5, loop: true });
+    this.bgMusic.play();
+
     var block = this.physics.add.image(400, 100, "block");
 
     //créer input avec les keyboard
