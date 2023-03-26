@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import NavigationMap from "./NavigationMap";
 
 const MapPage = () => {
   const [nomGroupe, setNomGroupe] = useState([]);
@@ -57,6 +58,7 @@ const MapPage = () => {
           </p>
         ))}
       </div>
+      <NavigationMap />
     </div>
   );
 };
