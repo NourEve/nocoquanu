@@ -5,12 +5,19 @@ import { useParams } from "react-router-dom";
 const VueEquipe = () => {
   const [equipe, setEquipe] = useState([]);
   const { equipeId } = useParams();
+  const [idEquipe, setIdEquipe] = useState("");
 
   useEffect(() => {
-    axios.get(`https://test.hugoorickx.tech/chi/${equipeId}`)
-    .then(res => setEquipe(res.data.message));
+    axios
+      .get(`https://test.hugoorickx.tech/chi/${equipeId}`)
+      .then((res) => setEquipe(res.data.message));
   }, []);
 
+  useEffect(() => {
+    setIdEquipe(equipeId);
+  }, [equipeId]);
+
+  console.log(idEquipe);
 
   return (
     <div>

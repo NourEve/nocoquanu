@@ -7,14 +7,20 @@ nav {
 	border-radius: 0.9rem;
 	left: 0.7rem;
 	right: 0.7rem;
-	background-color: rgba(255,255,255,0.4);
-	border: 1px solid rgba(255,255,255,0.3);
+	background-color: rgba(255, 255, 255, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 nav a {
 	border-right: 1px solid #203010;
 	padding-right: 1rem;
+	margin: auto;
 }
 
-nav a:last-child{
-    border-right:0;
+nav a:last-child {
+	border-right: 0;
+}
+
+.active path {
+	fill: #107869;
 }
