@@ -18,7 +18,7 @@ const VueBadge = ({ title, id }) => {
 
   return (
     <div>
-      <h3>{title}</h3>
+      <h3 className="badge__popup__title">{title}</h3>
       <ul>
         {quête.map((one, index) => (
           <li key={index}>

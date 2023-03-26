@@ -60,6 +60,12 @@
 	border-radius: 1rem;
 	backdrop-filter: blur(2rem);
 	border: 1px solid rgba(255, 255, 255, 0.5);
+
+	&__title {
+		text-align: center;
+		font-size: 6vw;
+		margin-bottom: 2%;
+	}
 }
 
 audio {
