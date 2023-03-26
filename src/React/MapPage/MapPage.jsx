@@ -38,17 +38,23 @@ const MapPage = () => {
   }, [IDEquipe, nomGroupe]);
 
   return (
-    <div>
-      <div>
+    <div className="mapPage">
+      <div className="mapPage__divLink">
         {isLink.map((nom, index) => (
-          <Link key={index} to={`/equipe/accueil`}>
+          <Link
+            key={index}
+            to={`/equipe/accueil`}
+            className="mapPage__divLink__link"
+          >
             {nom.nom}
           </Link>
         ))}
       </div>
-      <div>
+      <div className="mapPage__parag">
         {isParag.map((nom, index) => (
-          <p key={index}>{nom.nom}</p>
+          <p key={index} className="mapPage__parag__one">
+            {nom.nom}
+          </p>
         ))}
       </div>
     </div>

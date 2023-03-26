@@ -1,0 +1,32 @@
+.mapPage {
+      display: flex;
+      flex-direction: row;
+      font-size: 6vw;
+      color: white;
+      width: 100%;
+      justify-content: center;
+      margin: 2% 0%;
+      position: fixed;
+      top: 5%;
+      z-index: 5;
+
+      &__divLink {
+            margin-right: 5%;
+
+            &__link {
+                  text-decoration: none;
+                  color: white;
+                  background-color: #107869;
+                  padding: 3vw;
+                  box-shadow: 2vw 2vw 10vw black;
+            }
+      }
+
+      &__parag {
+            display: flex;
+
+            &__one {
+                  margin-right: 7%;
+            }
+      }
+}
