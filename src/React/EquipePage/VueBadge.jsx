@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const VueBadge = ({ id }) => {
+const VueBadge = ({ title, id }) => {
   const [quête, setQuête] = useState([]);
 
   useEffect(() => {
@@ -18,9 +18,13 @@ const VueBadge = ({ id }) => {
 
   return (
     <div>
+      <h3>{title}</h3>
       <ul>
         {quête.map((one, index) => (
-          <li key={index}>{one.activite_nom}</li>
+          <li key={index}>
+            <input type="checkbox" id={id} name={id} />
+            <label htmlFor={id}>{one.activite_nom}</label>
+          </li>
         ))}
       </ul>
     </div>

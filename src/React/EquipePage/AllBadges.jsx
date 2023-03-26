@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import VueBadge from "./VueBadge";
+import { useOutsideClick } from "@chakra-ui/react";
 
 const AllBadges = () => {
-  const BadgesArray = [
+  const badgesArray = [
     {
       nom: "Feu n°1",
       url: "../../public/assets/badge_feu_1.webp",
@@ -56,33 +57,40 @@ const AllBadges = () => {
   ];
 
   const [activeBadgeIndex, setActiveBadgeIndex] = useState(-1);
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef();
+
+  useOutsideClick({
+    ref: ref,
+    handler: () => setActiveBadgeIndex(-1),
+  });
 
   const handleClick = (index) => {
-    if (index === activeBadgeIndex) {
-      setActiveBadgeIndex(-1);
-    } else {
-      setActiveBadgeIndex(index);
-    }
+    setActiveBadgeIndex(index);
+    setIsOpen(true);
   };
 
   return (
     <div className="badges__wrapper">
       <h1>Badges</h1>
-      <div className="badges__allwrapper">{BadgesArray.map((badge, index) => (
-        <button
-          className="badges__wrapper__buttons"
-          key={index}
-          onClick={() => handleClick(index)}
-        >
-          <img src={badge.url} alt={"badge de/du " + badge.nom} />
-        </button>
-      ))}
-      {activeBadgeIndex !== -1 && (
-        <div class="badge__popup">
-          <h3>{BadgesArray[activeBadgeIndex].nom}</h3>
-          <VueBadge id={BadgesArray[activeBadgeIndex].id} />
-        </div>
-      )}
+      <div className="badges__allwrapper">
+        {badgesArray.map((badge, index) => (
+          <button
+            className="badges__wrapper__buttons"
+            key={index}
+            onClick={() => handleClick(index)}
+          >
+            <img src={badge.url} alt={"badge de/du " + badge.nom} />
+          </button>
+        ))}
+        {activeBadgeIndex !== -1 && isOpen && (
+          <div ref={ref} className="badge__popup">
+            <VueBadge
+              title={badgesArray[activeBadgeIndex].nom}
+              id={badgesArray[activeBadgeIndex].id}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
