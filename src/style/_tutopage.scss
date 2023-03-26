@@ -1,0 +1,77 @@
+main {
+    .tutopage {
+      gap: 1rem;
+      display: flex;
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 0.7rem;
+      border-radius: 0.4rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+      height: 85%;
+      position: relative;
+      overflow-y: hidden;
+      
+      h1 {
+        color: white;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 2.2rem;
+        margin: 7.5% 0;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+       
+      }
+      
+      .selector {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        position: absolute;
+        top: 27.5vw;
+        left: 2.5vw;
+        z-index: 100;
+        padding-bottom: 5%;
+        border-bottom: solid 1px rgb(255, 251, 251, 0.5) ;
+   
+        
+        button {
+          background-color: transparent;
+          border: none;
+          margin: 0 0.5rem;
+          font-size: 1.1rem;
+          &:hover {
+            text-decoration-line: underline;
+            text-decoration-color: #107869;
+            text-decoration-thickness: 2px;
+          }
+          
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+.data{
+    transform: translateY(-40vw);
+    
+}
+    }
+    .nav{
+        gap: 1rem;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        margin: 0.7rem;
+        border-radius: 0.4rem;
+        padding: 1rem;
+        position: relative;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+  }
+  
