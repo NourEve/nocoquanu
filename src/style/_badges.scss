@@ -37,7 +37,6 @@
 	background-color: #eaeaea0c;
 	display: block;
 	content: '';
-	backdrop-filter: blur(0.3rem);
 	z-index: 2;
 }
 
@@ -49,6 +48,10 @@
 	z-index: 999;
 	margin: 1rem 1rem;
 	border-radius: 1rem;
-	backdrop-filter: blur(1rem);
+    backdrop-filter:blur(2rem);
 	border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+audio {
+	opacity: 0;
 }
