@@ -1,4 +1,3 @@
-const body = document.getElementById("game-page");
 
 var config = {
     type : Phaser.AUTO,
