@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import IconMap from "../../assets/IconMap";
+import { NavLink } from "react-router-dom";
 function TutoPage() {
   const [selectedCategory, setSelectedCategory] = useState(2);
   const [data, setData] = useState([]);
@@ -18,15 +19,16 @@ function TutoPage() {
 
   return (
     <main>
-      <h2>Tuto</h2>
-      <div className="Selector">
+      <div className="tutopage">
+      <h1>Tuto</h1>
+      <div className="selector">
         <button onClick={() => handleCategoryClick(2)}>Eau</button>
         <button onClick={() => handleCategoryClick(3)}>Feu</button>
         <button onClick={() => handleCategoryClick(4)}>Nourriture</button>
         <button onClick={() => handleCategoryClick(5)}>Camp</button>
         <button onClick={() => handleCategoryClick(6)}>Hygiène</button>
       </div>
-      <div className="Data">
+      <div className="data">
         {data.length > 0 ? (
           data.map((item) => (
             <details key={item.ID_ency}>
@@ -40,6 +42,12 @@ function TutoPage() {
             <p>Veuillez sélectionner une autre catégorie.</p>
           </details>
         )}
+      </div>
+      </div>
+      <div className="nav">
+      <NavLink to={"/map"}>
+      <IconMap width="10vw" />
+      </NavLink>
       </div>
     </main>
   );
