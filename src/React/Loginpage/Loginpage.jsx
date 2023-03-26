@@ -5,7 +5,6 @@ import logo from "../../../public/assets/nocoquanu-logo.webp";
 import scout from "../../../public/assets/scout.gif";
 
 const Loginpage = () => {
-  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,21 +15,21 @@ const Loginpage = () => {
       url: `https://test.hugoorickx.tech/con/${username}/${password}`,
       responseType: "json",
     })
-    .then((response) => {
-      console.log(response);
-      localStorage.setItem("ID_log", response.data.message[0].ID_log);
-      console.log(response.data.message[0].ID_log);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+      .then((response) => {
+        console.log(response);
+        localStorage.setItem("ID_log", response.data.message[0].ID_log);
+        window.location.href = "/map";
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
     <main>
       <div className="loginpage">
         <div className="logo_container">
-         <h2>Nocoquanu</h2>
+          <h2>Nocoquanu</h2>
         </div>
 
         <div className="form">
@@ -65,6 +64,3 @@ const Loginpage = () => {
 };
 
 export default Loginpage;
-
-
-

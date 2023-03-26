@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+//import { useOutletContext } from "react-router-dom";
 
 const VueEquipe = () => {
   const [equipe, setEquipe] = useState([]);
-  const { equipeId } = useParams();
   const [idEquipe, setIdEquipe] = useState("");
 
   useEffect(() => {
-    axios
-      .get(`https://test.hugoorickx.tech/chi/${equipeId}`)
-      .then((res) => setEquipe(res.data.message));
+    const ID_log = localStorage.getItem("ID_log");
+    if (ID_log) {
+      // Récupère l'ID_log depuis le local storage
+      setIdEquipe(ID_log);
+      axios
+        .get(`https://test.hugoorickx.tech/chi/${ID_log}`)
+        .then((res) => setEquipe(res.data.message));
+    }
   }, []);
 
-  useEffect(() => {
-    setIdEquipe(equipeId);
-  }, [equipeId]);
-
   console.log(idEquipe);
+  console.log(equipe);
 
   return (
     <div>

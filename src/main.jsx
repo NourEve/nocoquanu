@@ -10,7 +10,6 @@ import VueEquipe from "./React/EquipePage/VueEquipe";
 import AllBadges from "./React/EquipePage/AllBadges";
 import Defis from "./React/EquipePage/Defis";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,11 +21,11 @@ const router = createBrowserRouter([
     element: <MapPage />,
   },
   {
-    path: "/equipe/:equipeId",
+    path: "/equipe",
     element: <EquipePage />,
     children: [
       {
-        path: "",
+        path: "accueil",
         element: <VueEquipe />,
       },
       {
@@ -47,7 +46,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Loginpage />
-
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
