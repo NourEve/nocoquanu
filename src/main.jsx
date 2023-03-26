@@ -4,10 +4,50 @@ import Loginpage from "./React/Loginpage/Loginpage";
 import MapPage from "./React/MapPage/MapPage";
 import "./index.scss";
 import TutoPage from "./React/TutoPage/Tutopage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import EquipePage from "./React/EquipePage/EquipePage";
+import VueEquipe from "./React/EquipePage/VueEquipe";
+import AllBadges from "./React/EquipePage/AllBadges";
+import Defis from "./React/EquipePage/Defis";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Loginpage />,
+    errorElement: <Loginpage />,
+  },
+  {
+    path: "/map",
+    element: <MapPage />,
+  },
+  {
+    path: "/equipe/:equipeId",
+    element: <EquipePage />,
+    children: [
+      {
+        path: "",
+        element: <VueEquipe />,
+      },
+      {
+        path: "badges",
+        element: <AllBadges />,
+      },
+      {
+        path: "defis",
+        element: <Defis />,
+      },
+    ],
+  },
+  {
+    path: "/tuto",
+    element: <TutoPage />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    < TutoPage/>
+    <Loginpage />
 
   </React.StrictMode>
 );

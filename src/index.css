@@ -40,8 +40,8 @@ body main .loginpage .form {
 body main .loginpage .form form {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  height: 65%;
+  width: 60%;
+  height: 60%;
 }
 body main .loginpage .form label {
   color: white;
@@ -53,16 +53,25 @@ body main .loginpage .form input {
   border: white 2px solid;
   border-radius: 40px;
   width: 100%;
-  height: 15%;
+  height: 50%;
   margin-bottom: 10%;
 }
 body main .loginpage .form button {
-  width: 60%;
-  height: 20%;
+  width: 70%;
+  height: 60%;
   background: linear-gradient(180deg, #597B3E 0%, #425435 100%);
   border-radius: 30px;
   border: none;
   color: white;
   font-size: 1.5rem;
   margin: 0 auto;
+}
+body main .loginpage .gif {
+  position: absolute;
+  bottom: -2%;
+  left: 35%;
+  width: 25%;
+}
+body main .loginpage .gif img {
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */
