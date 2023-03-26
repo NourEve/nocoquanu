@@ -1,28 +1,41 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 import logo from "../../../public/assets/nocoquanu-logo.webp";
-import gif from "../../../public/assets//scout.gif";
+import scout from "../../../public/assets/scout.gif";
 
-function Loginpage() {
+const Loginpage = () => {
+  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    // Faire quelque chose avec les informations d'identification ici
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios({
+      method: "get",
+      url: `https://test.hugoorickx.tech/con/${username}/${password}`,
+      responseType: "json",
+    })
+    .then((response) => {
+      console.log(response);
+      localStorage.setItem("ID_log", response.data.message[0].ID_log);
+      console.log(response.data.message[0].ID_log);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   };
 
   return (
     <main>
       <div className="loginpage">
         <div className="logo_container">
-          <img className="logo" src={logo} alt="logo" />
+         <h2>Nocoquanu</h2>
         </div>
 
         <div className="form">
           <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Nom d'utilisateur :</label>
+            <label htmlFor="username">Nom d'utilisateur:</label>
             <input
               type="text"
               id="username"
@@ -32,7 +45,7 @@ function Loginpage() {
               required
             />
 
-            <label htmlFor="password">Mot de passe :</label>
+            <label htmlFor="password">Mot de passe:</label>
             <input
               type="password"
               id="password"
@@ -45,13 +58,13 @@ function Loginpage() {
             <button type="submit">Connexion</button>
           </form>
         </div>
-
-        <div className="gif">
-          <img src={gif} alt="gif" />
-        </div>
+        <img className="scout" src={scout} alt="scout" />
       </div>
     </main>
   );
-}
+};
 
 export default Loginpage;
+
+
+

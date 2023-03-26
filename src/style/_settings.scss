@@ -1,6 +1,5 @@
 //Fonts
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27');
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 //Variables
 
 //Mixins
@@ -12,13 +11,7 @@
       box-sizing: border-box;
 }
 
-body {
-      background-image: url('../../public/background.png');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      width: 100vw;
-      height: 100vh;
-}
+
 
 li {
       list-style-type: none;
