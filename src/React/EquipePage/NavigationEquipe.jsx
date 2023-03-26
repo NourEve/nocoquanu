@@ -4,7 +4,7 @@ import IconBadge from "../../assets/IconBadge";
 import IconExclamation from "../../assets/IconExclamation";
 import IconMap from "../../assets/IconMap";
 import IconPeopleGroup from "../../assets/IconPeopleGroup";
-import IconPowerOff from "../../assets/IconPowerOff";
+import Logout from "./Logout";
 
 const NavigationEquipe = () => {
   return (
@@ -12,7 +12,7 @@ const NavigationEquipe = () => {
       <NavLink to={"/map"}>
         <IconMap />
       </NavLink>
-      <NavLink to={"/equipe"}>
+      <NavLink to={"/equipe/accueil"}>
         <IconPeopleGroup />
       </NavLink>
       <NavLink to={"/equipe/badges"}>
@@ -21,9 +21,7 @@ const NavigationEquipe = () => {
       <NavLink to={"/equipe/defis"}>
         <IconExclamation />
       </NavLink>
-      <NavLink to={"/"}>
-        <IconPowerOff />
-      </NavLink>
+      <Logout />
     </nav>
   );
 };

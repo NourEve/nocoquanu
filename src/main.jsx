@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import Loginpage from "./React/Loginpage/Loginpage";
 import MapPage from "./React/MapPage/MapPage";
 import "./index.scss";
+import TutoPage from "./React/TutoPage/Tutopage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import EquipePage from "./React/EquipePage/EquipePage";
-import TutoPage from "./React/TutoPage/TutoPage";
 import VueEquipe from "./React/EquipePage/VueEquipe";
 import AllBadges from "./React/EquipePage/AllBadges";
 import Defis from "./React/EquipePage/Defis";
@@ -21,11 +21,11 @@ const router = createBrowserRouter([
     element: <MapPage />,
   },
   {
-    path: "/equipe/:equipeId",
+    path: "/equipe",
     element: <EquipePage />,
     children: [
       {
-        path: "",
+        path: "accueil",
         element: <VueEquipe />,
       },
       {
